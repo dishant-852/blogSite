@@ -1,0 +1,22 @@
+<%- include("partials/header") %>
+    <h1>Home</h1>
+    <p>
+        <%= p1 %>
+    </p>
+    <% for(i=0; i < postarray.length; i++) { %>
+        <div class="item">
+            <h1>
+                <%= postarray[i].title %>
+            </h1>
+            <p>
+                <%= postarray[i].content.substring(0,100) + "... " %><a href="/posts/<%= postarray[i]._id %>"+>Read more</a>
+            </p>
+        </div>
+        <% } %>
+
+    <!-- <% postarray.forEach(function(post){ %>
+        <% console.log(post.title) %>
+            <% }) %> -->
+
+
+<%- include("partials/footer") %>
